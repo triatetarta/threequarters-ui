@@ -28,5 +28,6 @@ export default meta;
 export const Default: StoryObj = {
   args: {
     children: "Click Me",
+    disabled: true,
   },
 };
