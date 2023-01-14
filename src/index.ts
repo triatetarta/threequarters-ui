@@ -8,3 +8,6 @@ export type { SpinnerProps } from "./components/Spinner";
 
 export { Input } from "./components/Input";
 export type { InputProps } from "./components/Input";
+
+export { Textarea } from "./components/Textarea";
+export type { TextareaProps } from "./components/Textarea";

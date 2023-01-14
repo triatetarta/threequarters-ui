@@ -4,12 +4,8 @@ import { TextFieldBase } from "../../types";
 export interface InputProps extends TextFieldBase {
   /** Assign a type for the input */
   type?: "text" | "tel" | "email" | "password";
-  /** CSS classNames to style the container */
-  containerClassName?: string;
-  /** CSS classNames to style the label */
-  labelClassName?: string;
-  /** CSS classNames to style the input */
-  inputClassName?: string;
+  /** Callback fired when value is changed */
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Input = ({
@@ -22,7 +18,7 @@ export const Input = ({
   placeholder,
   containerClassName,
   labelClassName,
-  inputClassName,
+  textFieldClassName,
   type = "text",
   value = "",
   onChange,
@@ -49,7 +45,7 @@ export const Input = ({
         disabled={disabled}
         placeholder={placeholder}
         onChange={onChange}
-        className={inputClassName}
+        className={textFieldClassName}
       />
     </div>
   );

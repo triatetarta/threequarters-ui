@@ -23,7 +23,7 @@ const DefaultInput = () => {
       containerClassName='w-[20rem]'
       placeholder='Enter your text'
       labelClassName='text-blue-500 text-xs'
-      inputClassName='w-full p-2 border rounded-md mb-3 focus:outline-1 outline-blue-500 text-xs sm:text-sm placeholder:text-xs sm:placeholder:text-sm hover:bg-gray-100 transition-all duration-200 text-black'
+      textFieldClassName='w-full p-2 border rounded-md mb-3 focus:outline-1 outline-blue-500 text-xs sm:text-sm placeholder:text-xs sm:placeholder:text-sm hover:bg-gray-100 transition-all duration-200 text-black'
       id='text'
       name='text'
       htmlFor='text'
@@ -42,7 +42,7 @@ export const DisabledTextInput: Story = {
       containerClassName='w-[20rem]'
       disabled={true}
       labelClassName='text-blue-500 text-xs'
-      inputClassName='w-full p-2 border rounded-md mb-3 focus:outline-1 outline-blue-500 text-xs sm:text-sm placeholder:text-xs sm:placeholder:text-sm hover:bg-gray-100 transition-all duration-200 text-black/70'
+      textFieldClassName='w-full p-2 border rounded-md mb-3 focus:outline-1 outline-blue-500 text-xs sm:text-sm placeholder:text-xs sm:placeholder:text-sm hover:bg-gray-100 transition-all duration-200 text-black/70'
       value='This is the value'
     />
   ),

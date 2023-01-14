@@ -29,6 +29,12 @@ export interface ButtonBase {
 }
 
 export interface TextFieldBase {
+  /** CSS classNames to style the container */
+  containerClassName?: string;
+  /** CSS classNames to style the label */
+  labelClassName?: string;
+  /** CSS classNames to style the textfield element */
+  textFieldClassName?: string;
   /** ID for the input */
   id?: string;
   /** Specifies the id of the form element the label should be bound to */
@@ -41,12 +47,8 @@ export interface TextFieldBase {
   placeholder?: string;
   /** Initial value for the input */
   value?: string | undefined;
-  /** CSS classNames to style the textfield element */
-  className?: "string";
   /** Automatically focus the input */
   focus?: boolean;
   /** Disable the input */
   disabled?: boolean;
-  /** Callback fired when value is changed */
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
