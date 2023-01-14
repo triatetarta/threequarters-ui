@@ -5,6 +5,14 @@ import { Button } from "../index";
 const meta = {
   title: "Example/Button",
   component: Button,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "A plain Button component that allows users to perform actions with a single click or tap",
+      },
+    },
+  },
   argTypes: {
     children: {
       name: "children",

@@ -5,6 +5,14 @@ import { Input } from "../index";
 const meta = {
   title: "Example/Input",
   component: Input,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Input fields can be used to get the input of a user in a text field",
+      },
+    },
+  },
   tags: ["autodocs"],
 } satisfies Meta<typeof Input>;
 

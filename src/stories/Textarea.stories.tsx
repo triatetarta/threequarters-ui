@@ -5,6 +5,14 @@ import { Textarea } from "../index";
 const meta = {
   title: "Example/Textarea",
   component: Textarea,
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "Textarea component can be used to get the input of a user in a multi-line text field",
+      },
+    },
+  },
   tags: ["autodocs"],
 } satisfies Meta<typeof Textarea>;
 
