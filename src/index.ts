@@ -14,3 +14,6 @@ export type { TextareaProps } from "./components/Textarea";
 
 export { Switch } from "./components/Switch";
 export type { SwitchProps } from "./components/Switch";
+
+export { Select } from "./components/Select";
+export type { SelectProps } from "./components/Select";
