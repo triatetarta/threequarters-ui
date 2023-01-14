@@ -52,6 +52,7 @@ export const DisabledButton = () => {
   return (
     <Button
       disabled={isDisabled}
+      ariaDescribedBy='disabled button'
       className={`${
         isDisabled ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
       } transition-color duration-150 ease-out text-white px-4 py-2 rounded-md`}

@@ -22,7 +22,9 @@ export const Button = React.forwardRef<Ref, ButtonProps>(
       ariaControls,
       ariaExpanded,
       label,
-      ...props
+      role,
+      className,
+      onClick,
     },
     ref
   ) => {
@@ -31,6 +33,10 @@ export const Button = React.forwardRef<Ref, ButtonProps>(
     return (
       <button
         ref={ref}
+        role={role}
+        type={type}
+        onClick={onClick}
+        className={className}
         disabled={isDisabled}
         aria-label={label}
         aria-disabled={disabled}
@@ -38,7 +44,6 @@ export const Button = React.forwardRef<Ref, ButtonProps>(
         aria-checked={ariaChecked}
         aria-controls={ariaControls}
         aria-expanded={ariaExpanded}
-        {...props}
       >
         {children}
       </button>

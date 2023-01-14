@@ -12,7 +12,6 @@ export interface SpinnerProps {
 export const Spinner = ({
   color = "border-blue-500",
   size = "large",
-  ...props
 }: SpinnerProps) => {
   const getSize = (size: SizeType) => {
     switch (size) {
@@ -32,7 +31,6 @@ export const Spinner = ({
       className={`${getSize(
         size
       )} rounded-full animate-spin border-y-2 border-solid border-t-transparent mx-auto ${color}`}
-      {...props}
     />
   );
 };
