@@ -1,3 +1,10 @@
+import React from "react";
+
+export type Error =
+  | string
+  | React.ReactElement
+  | (string | React.ReactElement)[];
+
 export interface ButtonBase {
   /** Disables the button */
   disabled?: boolean;
@@ -19,4 +26,27 @@ export interface ButtonBase {
   ariaChecked?: "false" | "true";
   /** Callback when clicked */
   onClick?: () => void;
+}
+
+export interface TextFieldBase {
+  /** ID for the input */
+  id?: string;
+  /** Specifies the id of the form element the label should be bound to */
+  htmlFor?: string;
+  /** Label for the input */
+  label?: string;
+  /** Name of the input */
+  name?: string;
+  /** Placeholder text to display */
+  placeholder?: string;
+  /** Initial value for the input */
+  value?: string | undefined;
+  /** CSS classNames to style the textfield element */
+  className?: "string";
+  /** Automatically focus the input */
+  focus?: boolean;
+  /** Disable the input */
+  disabled?: boolean;
+  /** Callback fired when value is changed */
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

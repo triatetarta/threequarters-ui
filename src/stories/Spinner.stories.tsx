@@ -8,8 +8,9 @@ const meta = {
 } satisfies Meta<typeof Spinner>;
 
 export default meta;
+type Story = StoryObj<typeof Spinner>;
 
-export const Default: StoryObj = {
+export const Default: Story = {
   args: {
     size: "large",
   },
