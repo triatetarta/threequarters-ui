@@ -1,6 +1,6 @@
 {
   "name": "@threequarters-ui/react",
-  "version": "0.0.15-b",
+  "version": "0.0.15-c",
   "description": "Three Quarters UI component library.",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -22,6 +22,7 @@
     "@storybook/addon-interactions": "^7.0.0-beta.25",
     "@storybook/addon-links": "^7.0.0-beta.25",
     "@storybook/blocks": "^7.0.0-beta.25",
+    "@storybook/jest": "^0.0.10",
     "@storybook/react": "^7.0.0-beta.25",
     "@storybook/react-vite": "^7.0.0-beta.25",
     "@storybook/testing-library": "^0.0.13",

@@ -1,6 +1,7 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../index";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 const meta = {
   title: "Example/Button",
@@ -38,24 +39,39 @@ type Story = StoryObj<typeof Button>;
 
 export const DefaultButton: Story = {
   args: {
+    disabled: false,
     children: "Click Me",
     ariaDescribedBy: "this is a button",
     label: "Click Me",
     className:
       "bg-blue-500 hover:bg-blue-600 transition-color duration-150 ease-out text-white px-4 py-2 rounded-md",
   },
+
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttonElement = canvas.getByRole("button");
+
+    await expect(args.disabled).toBe(false);
+    await expect(buttonElement).toBeInTheDocument();
+    await userEvent.click(buttonElement);
+    await expect(args.onClick).toHaveBeenCalled();
+  },
 };
 
-export const DisabledButton = () => {
-  const [isDisabled, setIsDisabled] = React.useState(true);
+export const DisabledButton: Story = {
+  args: {
+    disabled: true,
+    children: "Disabled",
+    ariaDescribedBy: "this is a disabled button",
+    label: "Disabled",
+    className: "bg-gray-400 text-white px-4 py-2 rounded-md",
+  },
 
-  return (
-    <Button
-      disabled={isDisabled}
-      ariaDescribedBy='disabled button'
-      className={`${
-        isDisabled ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
-      } transition-color duration-150 ease-out text-white px-4 py-2 rounded-md`}
-    />
-  );
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const buttonElement = canvas.getByRole("button");
+
+    await expect(buttonElement).toBeInTheDocument();
+    await expect(args.disabled).toBe(true);
+  },
 };
