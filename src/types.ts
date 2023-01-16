@@ -25,7 +25,7 @@ export interface ButtonBase {
   /** Indicates the current checked state of the button when acting as a toggle or switch */
   ariaChecked?: "false" | "true";
   /** Callback when clicked */
-  onClick?: () => void;
+  onClick?: React.MouseEventHandler;
 }
 
 export interface TextFieldBase {

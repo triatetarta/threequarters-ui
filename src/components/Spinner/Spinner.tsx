@@ -28,6 +28,7 @@ export const Spinner = ({
 
   return (
     <div
+      data-testid='spinner'
       className={`${getSize(
         size
       )} rounded-full animate-spin border-y-2 border-solid border-t-transparent mx-auto ${color}`}

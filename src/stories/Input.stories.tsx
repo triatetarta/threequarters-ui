@@ -1,6 +1,8 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Input } from "../index";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 const meta = {
   title: "Example/Input",
@@ -41,6 +43,16 @@ const DefaultInput = () => {
 
 export const DefaultTextInput: Story = {
   render: () => <DefaultInput />,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole("textbox");
+
+    await expect(inputElement).toBeInTheDocument();
+
+    await userEvent.type(inputElement, "Hello");
+
+    await expect(inputElement).toHaveValue("Hello");
+  },
 };
 
 export const DisabledTextInput: Story = {
