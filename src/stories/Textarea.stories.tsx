@@ -1,6 +1,8 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Textarea } from "../index";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 const meta = {
   title: "Example/Textarea",
@@ -38,6 +40,19 @@ const DefaultTextarea = () => {
   );
 };
 
+const longText =
+  "Plaid unicorn jianbing jean shorts typewriter irony narwhal neutra vape vibecession bicycle rights. Pork belly +1 praxis coloring book waistcoat next level. Bespoke tumblr scenester, celiac fingerstache shabby chic twee +1 tilde put a bird on it af succulents. Fixie wayfarers chartreuse cloud bread gochujang pickled bruh shabby chic synth shaman put a bird on it kombucha.";
+
 export const DefaultTextareaText: Story = {
   render: () => <DefaultTextarea />,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const inputElement = canvas.getByRole("textbox");
+
+    await expect(inputElement).toBeInTheDocument();
+
+    await userEvent.type(inputElement, longText);
+
+    await expect(inputElement).toHaveValue(longText);
+  },
 };
