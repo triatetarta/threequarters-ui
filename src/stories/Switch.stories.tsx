@@ -1,4 +1,6 @@
+import { expect } from "@storybook/jest";
 import type { Meta, StoryObj } from "@storybook/react";
+import { userEvent, within } from "@storybook/testing-library";
 import React from "react";
 import { Switch } from "../index";
 
@@ -31,4 +33,16 @@ const DefaultSwitchComponent = () => {
 
 export const DefaultSwitch: Story = {
   render: () => <DefaultSwitchComponent />,
+  args: {
+    checked: true,
+  },
+
+  play: async ({ args, canvasElement }) => {
+    const canvas = within(canvasElement);
+    const switchElement = canvas.getByTestId("switch");
+
+    await expect(switchElement).toBeInTheDocument();
+    await userEvent.click(switchElement);
+    await expect(args.checked).toBe(true);
+  },
 };

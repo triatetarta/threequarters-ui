@@ -70,6 +70,7 @@ export const Switch = ({
         checked={enabled}
         disabled={disabled}
         id={id}
+        data-testid='switch'
       />
       <motion.label
         layout
