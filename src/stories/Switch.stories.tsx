@@ -33,16 +33,14 @@ const DefaultSwitchComponent = () => {
 
 export const DefaultSwitch: Story = {
   render: () => <DefaultSwitchComponent />,
-  args: {
-    checked: true,
-  },
 
-  play: async ({ args, canvasElement }) => {
+  play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
     const switchElement = canvas.getByTestId("switch");
 
     await expect(switchElement).toBeInTheDocument();
+    await expect(switchElement).not.toBeChecked();
     await userEvent.click(switchElement);
-    await expect(args.checked).toBe(true);
+    await expect(switchElement).toBeChecked();
   },
 };

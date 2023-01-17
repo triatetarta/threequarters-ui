@@ -68,6 +68,7 @@ export const Select = ({
       </label>
       <div className='relative flex items-center'>
         <select
+          data-testid='select'
           className={`w-full ${selectClassNames}`}
           name={name}
           id={id}

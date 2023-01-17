@@ -1,6 +1,8 @@
 import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Select } from "../index";
+import { userEvent, within } from "@storybook/testing-library";
+import { expect } from "@storybook/jest";
 
 const meta = {
   title: "Example/Select",
@@ -46,4 +48,19 @@ const SelectExample = () => {
 
 export const DefaultSelectField: Story = {
   render: () => <SelectExample />,
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const selectElement = canvas.getByTestId("select");
+    const optionElement = canvas.getAllByRole("option");
+
+    await expect(selectElement).toBeInTheDocument();
+    await expect(selectElement).toHaveValue("react");
+
+    await expect(optionElement.length).toBe(3);
+
+    const comoboxElement = canvas.getByRole("combobox");
+
+    await userEvent.selectOptions(comoboxElement, optionElement[2]);
+    await expect(selectElement).toHaveValue("remix");
+  },
 };
