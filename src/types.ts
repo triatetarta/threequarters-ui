@@ -8,8 +8,6 @@ export type Error =
 export interface ButtonBase {
   /** Disables the button */
   disabled?: boolean;
-  /** Replaces button content with a spinner while loading state is true */
-  loading?: boolean;
   /** Label text for screen readers (Visually hidden) */
   label?: string;
   /** A valid WAI-ARIA role to define the semantic value of this element */

@@ -16,7 +16,6 @@ export const Button = React.forwardRef<Ref, ButtonProps>(
       children = "Click Me",
       type = "button",
       disabled = false,
-      loading = false,
       ariaDescribedBy,
       ariaChecked,
       ariaControls,
@@ -28,7 +27,7 @@ export const Button = React.forwardRef<Ref, ButtonProps>(
     },
     ref
   ) => {
-    const isDisabled = disabled || loading;
+    const isDisabled = disabled;
 
     return (
       <button

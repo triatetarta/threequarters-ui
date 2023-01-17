@@ -1,5 +1,5 @@
-import React from "react";
 import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
 import { Switch } from "../index";
 
 const meta = {
@@ -19,28 +19,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Switch>;
 
-export const DefaultSwitch = () => {
-  const [enabled, setEnabled] = React.useState(true);
+const DefaultSwitchComponent = () => {
+  const [isOn, setIsOne] = React.useState(false);
 
-  return (
-    <Switch
-      isOn={enabled}
-      id='switch'
-      handleChecked={() => setEnabled(!enabled)}
-    />
-  );
+  const onChange = () => {
+    setIsOne(!isOn);
+  };
+
+  return <Switch id='switch' checked={isOn} onChange={onChange} />;
 };
 
-export const DisabledSwitch: Story = {
-  args: {
-    isOn: false,
-    id: "disabled",
-  },
-};
-
-export const EnabledSwitch: Story = {
-  args: {
-    isOn: true,
-    id: "enabled",
-  },
+export const DefaultSwitch: Story = {
+  render: () => <DefaultSwitchComponent />,
 };
