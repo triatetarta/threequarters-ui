@@ -4,7 +4,7 @@ import { userEvent, within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 
 const meta = {
-  title: "Example/Button",
+  title: "Three Quarters UI/Button",
   component: Button,
   parameters: {
     docs: {

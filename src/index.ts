@@ -17,3 +17,6 @@ export type { SwitchProps } from "./components/Switch";
 
 export { Select } from "./components/Select";
 export type { SelectProps } from "./components/Select";
+
+export { Text } from "./components/Text";
+export type { TextProps } from "./components/Text";

@@ -5,7 +5,7 @@ import { userEvent, within } from "@storybook/testing-library";
 import { expect } from "@storybook/jest";
 
 const meta = {
-  title: "Example/Textarea",
+  title: "Three Quarters UI/Textarea",
   component: Textarea,
   parameters: {
     docs: {

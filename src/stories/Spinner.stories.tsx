@@ -4,7 +4,7 @@ import { within } from "@storybook/testing-library";
 import { Spinner } from "../index";
 
 const meta = {
-  title: "Example/Spinner",
+  title: "Three Quarters UI/Spinner",
   component: Spinner,
   parameters: {
     docs: {

@@ -5,7 +5,7 @@ import React from "react";
 import { Switch } from "../index";
 
 const meta = {
-  title: "Example/Switch",
+  title: "Three Quarters UI/Switch",
   component: Switch,
   parameters: {
     docs: {
