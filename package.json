@@ -22,6 +22,8 @@
     "*.{js,jsx,ts,tsx,css}": "prettier --write"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "clsx": "2.1.1",
     "fumadocs-core": "16.0.10",
     "fumadocs-mdx": "13.0.7",
