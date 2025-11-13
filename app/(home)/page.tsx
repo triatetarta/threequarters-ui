@@ -1,3 +1,5 @@
+import { Button } from '@/registry/default/ui/button';
+import { Computer } from 'lucide-react';
 import Link from 'next/link';
 
 export default function HomePage() {
@@ -11,6 +13,21 @@ export default function HomePage() {
         </Link>{' '}
         and see the documentation.
       </p>
+
+      {/* <div className='mx-auto mt-4 flex max-w-lg flex-col gap-4'>
+        <Button size='lg'>Click me</Button>
+        <Button size='default'>Click me</Button>
+        <Button size='sm'>Click me</Button>
+        <Button size='lg'>
+          <Computer /> Click me
+        </Button>
+        <Button size='default'>
+          <Computer /> Click me
+        </Button>
+        <Button size='sm'>
+          <Computer /> Click me
+        </Button>
+      </div> */}
     </div>
   );
 }
