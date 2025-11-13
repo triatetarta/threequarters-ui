@@ -25,6 +25,7 @@
     "@base-ui-components/react": "1.0.0-beta.4",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
+    "class-variance-authority": "^0.7.1",
     "clsx": "2.1.1",
     "fumadocs-core": "16.0.10",
     "fumadocs-mdx": "13.0.7",
