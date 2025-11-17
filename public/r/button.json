@@ -4,8 +4,7 @@
   "type": "registry:ui",
   "title": "Button",
   "dependencies": [
-    "@base-ui-components/react",
-    "class-variance-authority"
+    "@base-ui-components/react"
   ],
   "files": [
     {
