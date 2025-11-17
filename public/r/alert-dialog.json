@@ -7,7 +7,7 @@
     "@base-ui-components/react"
   ],
   "registryDependencies": [
-    "@threequarters/ui/button"
+    "@threequarters-ui/button"
   ],
   "files": [
     {
