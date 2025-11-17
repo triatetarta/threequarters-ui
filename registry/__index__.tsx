@@ -34,7 +34,7 @@ export const Index: Record<string, any> = {
     name: 'alert-dialog',
     description: '',
     type: 'registry:ui',
-    registryDependencies: ['@threequarters/ui/button'],
+    registryDependencies: ['@threequarters-ui/button'],
     files: [
       {
         path: 'registry/default/ui/alert-dialog.tsx',
