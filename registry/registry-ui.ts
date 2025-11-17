@@ -14,6 +14,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'alert-dialog',
+    type: 'registry:ui',
+    title: 'Alert Dialog',
+    registryDependencies: ['@threequarters/ui/button'],
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/alert-dialog.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'button',
     type: 'registry:ui',
     title: 'Button',
