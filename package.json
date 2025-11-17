@@ -27,7 +27,7 @@
     "@vercel/speed-insights": "1.2.0",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
-    "fumadocs-core": "16.0.10",
+    "fumadocs-core": "16.0.13",
     "fumadocs-mdx": "13.0.7",
     "fumadocs-ui": "16.0.10",
     "husky": "9.1.7",
