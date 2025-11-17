@@ -3,12 +3,25 @@
   "homepage": "https://threequarters-ui.com",
   "items": [
     {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "dependencies": [
+        "@base-ui-components/react"
+      ],
+      "files": [
+        {
+          "path": "registry/default/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
       "dependencies": [
-        "@base-ui-components/react",
-        "class-variance-authority"
+        "@base-ui-components/react"
       ],
       "files": [
         {
