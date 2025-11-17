@@ -1,8 +1,10 @@
-import { registry } from '../registry/index.js';
 import { exec } from 'child_process';
 import { promises as fs } from 'fs';
 import path from 'path';
+
 import { rimraf } from 'rimraf';
+
+import { registry } from '../registry/index.js';
 
 type RegistryFile = {
   path: string;
@@ -118,9 +120,7 @@ async function buildRegistryJsonFile() {
 
 async function buildRegistry() {
   return new Promise((resolve, reject) => {
-    const process = exec(
-      `pnpx shadcn build registry.json --output public/r`
-    );
+    const process = exec(`pnpx shadcn build registry.json --output public/r`);
 
     process.on('exit', (code) => {
       if (code === 0) {
@@ -133,7 +133,7 @@ async function buildRegistry() {
 }
 
 try {
-  console.log('🗂️ Building registry/__index__.tsx...');
+  console.log('🗂️ Building unified registry/__index__.tsx...');
   await buildRegistryIndex();
 
   console.log('💅 Building registry.json...');
@@ -142,7 +142,7 @@ try {
   console.log('🏗️ Building registry...');
   await buildRegistry();
 
-  console.log('✅ Registry build completed successfully!');
+  console.log('\n✅ Build complete!');
 } catch (error) {
   console.error(error);
   process.exit(1);
