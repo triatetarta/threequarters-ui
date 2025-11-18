@@ -33,7 +33,7 @@ function AccordionTrigger({
         {...props}
       >
         {children}
-        <PlusIcon className='pointer-events-none size-4 shrink-0 translate-y-0.5 opacity-72 transition-transform duration-200 ease-in-out' />
+        <PlusIcon className='pointer-events-none size-4 shrink-0 translate-y-0.5 opacity-72 transition-transform duration-150 ease-out' />
       </AccordionPrimitive.Trigger>
     </AccordionPrimitive.Header>
   );
@@ -46,7 +46,7 @@ function AccordionPanel({
 }: AccordionPrimitive.Panel.Props) {
   return (
     <AccordionPrimitive.Panel
-      className='h-(--accordion-panel-height) overflow-hidden text-sm text-muted-foreground transition-[height] duration-200 ease-in-out data-ending-style:h-0 data-starting-style:h-0'
+      className='h-(--accordion-panel-height) overflow-hidden text-sm text-muted-foreground transition-[height] duration-150 ease-out data-ending-style:h-0 data-starting-style:h-0'
       data-slot='accordion-panel'
       {...props}
     >
