@@ -28,7 +28,7 @@
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "fumadocs-core": "16.0.13",
-    "fumadocs-mdx": "13.0.8",
+    "fumadocs-mdx": "14.0.1",
     "fumadocs-ui": "16.0.13",
     "husky": "9.1.7",
     "lucide-react": "0.554.0",
@@ -58,6 +58,14 @@
     "prettier-plugin-tailwindcss": "0.7.1",
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.6"
+    },
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ]
   },
   "pre-commit": "lint-staged",
   "prettier": {
