@@ -27,6 +27,19 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'autocomplete',
+    type: 'registry:ui',
+    title: 'Autocomplete',
+    registryDependencies: ['@threequarters-ui/input'],
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/autocomplete.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'button',
     type: 'registry:ui',
     title: 'Button',
