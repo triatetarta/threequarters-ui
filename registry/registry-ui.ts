@@ -40,6 +40,18 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'avatar',
+    type: 'registry:ui',
+    title: 'Avatar',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/avatar.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'button',
     type: 'registry:ui',
     title: 'Button',
