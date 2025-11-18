@@ -136,6 +136,20 @@
       ]
     },
     {
+      "name": "separator",
+      "type": "registry:ui",
+      "title": "Separator",
+      "dependencies": [
+        "@base-ui-components/react"
+      ],
+      "files": [
+        {
+          "path": "registry/default/ui/separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "utils",
       "type": "registry:lib",
       "dependencies": [
