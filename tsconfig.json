@@ -15,8 +15,7 @@
     "incremental": true,
     "paths": {
       "@/*": ["./*"],
-      "@/.source": [".source"],
-      "react": ["./node_modules/@types/react"]
+      "@/.source": [".source"]
     },
     "plugins": [
       {

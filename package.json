@@ -59,6 +59,11 @@
     "tailwindcss": "4.1.17",
     "typescript": "5.9.3"
   },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.6"
+    }
+  },
   "pre-commit": "lint-staged",
   "prettier": {
     "tabWidth": 2,
