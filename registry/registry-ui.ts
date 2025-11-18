@@ -135,4 +135,16 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'toggle',
+    type: 'registry:ui',
+    title: 'Toggle',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/toggle.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
