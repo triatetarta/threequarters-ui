@@ -11,6 +11,8 @@ export default function HomePage() {
         </Link>{' '}
         and see the documentation.
       </p>
+
+      <div className='mx-auto'></div>
     </div>
   );
 }

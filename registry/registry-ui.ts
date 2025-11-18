@@ -123,4 +123,16 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'switch',
+    type: 'registry:ui',
+    title: 'Switch',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/switch.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
