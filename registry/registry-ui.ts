@@ -75,4 +75,16 @@ export const ui: Registry['items'] = [
       },
     ],
   },
+  {
+    name: 'label',
+    type: 'registry:ui',
+    title: 'Label',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/label.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
 ];
