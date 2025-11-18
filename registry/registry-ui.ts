@@ -64,6 +64,18 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'collapsible',
+    type: 'registry:ui',
+    title: 'Collapsible',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/collapsible.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'input',
     type: 'registry:ui',
     title: 'Input',
