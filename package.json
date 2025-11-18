@@ -62,7 +62,10 @@
   "pnpm": {
     "overrides": {
       "@types/react": "19.2.6"
-    }
+    },
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ]
   },
   "pre-commit": "lint-staged",
   "prettier": {
