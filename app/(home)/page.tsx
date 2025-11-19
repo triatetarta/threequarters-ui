@@ -12,7 +12,7 @@ export default function HomePage() {
         and see the documentation.
       </p>
 
-      <div className='mx-auto'></div>
+      <div className='mx-auto w-md'></div>
     </div>
   );
 }
