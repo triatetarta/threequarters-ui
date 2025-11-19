@@ -112,6 +112,17 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'progress',
+    type: 'registry:ui',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/progress.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'select',
     type: 'registry:ui',
     dependencies: ['@base-ui-components/react'],
