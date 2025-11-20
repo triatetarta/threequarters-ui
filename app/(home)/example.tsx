@@ -1,3 +1,5 @@
+import { Slider } from '@/registry/default/ui/slider';
+
 export default function Example() {
-  return null;
+  return <Slider defaultValue={50} />;
 }
