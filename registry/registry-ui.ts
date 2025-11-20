@@ -64,6 +64,30 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'checkbox',
+    type: 'registry:ui',
+    title: 'Checkbox',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/checkbox.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'checkbox-group',
+    type: 'registry:ui',
+    title: 'Checkbox Group',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/checkbox-group.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'collapsible',
     type: 'registry:ui',
     title: 'Collapsible',
@@ -107,6 +131,17 @@ export const ui: Registry['items'] = [
     files: [
       {
         path: 'ui/label.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'progress',
+    type: 'registry:ui',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/progress.tsx',
         type: 'registry:ui',
       },
     ],

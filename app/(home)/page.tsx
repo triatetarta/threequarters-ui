@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import Example from './example';
+
 export default function HomePage() {
   return (
     <div className='flex flex-1 flex-col justify-center text-center'>
@@ -12,7 +14,9 @@ export default function HomePage() {
         and see the documentation.
       </p>
 
-      <div className='mx-auto'></div>
+      <div className='mx-auto mt-6 flex w-md items-center justify-center'>
+        <Example />
+      </div>
     </div>
   );
 }
