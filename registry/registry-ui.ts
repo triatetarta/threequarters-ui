@@ -112,6 +112,30 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'field',
+    type: 'registry:ui',
+    title: 'Field',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/field.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'fieldset',
+    type: 'registry:ui',
+    title: 'Fieldset',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/fieldset.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'input',
     type: 'registry:ui',
     title: 'Input',
