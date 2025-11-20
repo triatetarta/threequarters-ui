@@ -126,6 +126,54 @@ export const Index: Record<string, any> = {
     categories: undefined,
     meta: undefined,
   },
+  checkbox: {
+    name: 'checkbox',
+    description: '',
+    type: 'registry:ui',
+    registryDependencies: undefined,
+    files: [
+      {
+        path: 'registry/default/ui/checkbox.tsx',
+        type: 'registry:ui',
+        target: '',
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import('@/registry/default/ui/checkbox.tsx');
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
+  'checkbox-group': {
+    name: 'checkbox-group',
+    description: '',
+    type: 'registry:ui',
+    registryDependencies: undefined,
+    files: [
+      {
+        path: 'registry/default/ui/checkbox-group.tsx',
+        type: 'registry:ui',
+        target: '',
+      },
+    ],
+    component: React.lazy(async () => {
+      const mod = await import('@/registry/default/ui/checkbox-group.tsx');
+      const exportName =
+        Object.keys(mod).find(
+          (key) =>
+            typeof mod[key] === 'function' || typeof mod[key] === 'object'
+        ) || item.name;
+      return { default: mod.default || mod[exportName] };
+    }),
+    categories: undefined,
+    meta: undefined,
+  },
   collapsible: {
     name: 'collapsible',
     description: '',
