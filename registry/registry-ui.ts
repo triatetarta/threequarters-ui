@@ -160,6 +160,18 @@ export const ui: Registry['items'] = [
     ],
   },
   {
+    name: 'meter',
+    type: 'registry:ui',
+    title: 'Meter',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/meter.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
     name: 'progress',
     type: 'registry:ui',
     dependencies: ['@base-ui-components/react'],
@@ -189,6 +201,18 @@ export const ui: Registry['items'] = [
     files: [
       {
         path: 'ui/separator.tsx',
+        type: 'registry:ui',
+      },
+    ],
+  },
+  {
+    name: 'slider',
+    type: 'registry:ui',
+    title: 'Slider',
+    dependencies: ['@base-ui-components/react'],
+    files: [
+      {
+        path: 'ui/slider.tsx',
         type: 'registry:ui',
       },
     ],
